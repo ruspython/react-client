@@ -34,32 +34,35 @@ const Main = React.createClass({
     },
 
     render() {
-
-        let containerStyle = {
-            textAlign: 'center'
-        };
-
-        let standardActions = [
-            {text: 'Okay'}
-        ];
-
         return (
-            <div style={containerStyle}>
-                <p>
-                    <TextField
-                        hintText="Login"
+            <div className="centered">
+                <form action="http://localhost:5000/api/v1/register" method="post">
+                    <p>
+                        <TextField
+                            hintText="Login"
 
-                        />
-                </p>
-                <p>
-                    <TextField
-                        hintText="Password"
+                            />
+                    </p>
+                    <p>
+                        <TextField
+                            hintText="Password"
 
-                        />
-                </p>
-                <p>
-                    <RaisedButton>Submit</RaisedButton>
-                </p>
+                            />
+                    </p>
+                    <p>
+                        <TextField
+                            hintText="Retype Password"
+
+                            />
+                    </p>
+                    <p>
+                        <RaisedButton
+                            label="Submit"
+                            type="submit"
+                            />
+
+                    </p>
+                </form>
             </div>
         );
     },

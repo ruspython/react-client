@@ -1,14 +1,11 @@
-/** In this file, we create a React component which incorporates components provided by material-ui */
-
 const React = require('react');
-const Tabs = require('material-ui/lib/tabs/tabs');
-const Tab = require('material-ui/lib/tabs/tab');
-const Dialog = require('material-ui/lib/dialog');
+const Paper = require('material-ui/lib/paper');
+const RaisedButton = require('material-ui/lib/raised-button');
+const TextField = require('material-ui/lib/text-field');
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
-const LoginForm = require('./login.jsx');
-const RegisterForm = require('./register.jsx');
+
 
 const Main = React.createClass({
 
@@ -37,26 +34,29 @@ const Main = React.createClass({
     },
 
     render() {
-
-        let containerStyle = {
-            textAlign: 'center'
-        };
-
-        let standardActions = [
-            {text: 'Okay'}
-        ];
-
         return (
-            <div style={containerStyle}>
-                <Tabs>
-                    <Tab label="Login">
-                        <LoginForm />
-                    </Tab>
-                    <Tab label="Register">
-                        <RegisterForm />
-                    </Tab>
-                </Tabs>
+            <div className="centered">
+                <form action="http://localhost:5000/api/v1/login" method="post">
+                    <p>
+                        <TextField
+                            hintText="Login"
 
+                            />
+                    </p>
+                    <p>
+                        <TextField
+                            hintText="Password"
+
+                            />
+                    </p>
+                    <p>
+                        <RaisedButton
+                            label="Submit"
+                            type="submit"
+                            />
+
+                    </p>
+                </form>
             </div>
         );
     },

@@ -12,6 +12,6 @@ gulp.task('watch', ['setWatch', 'browserSync'], function () {
 
 gulp.task('less-watcher', function () {
     console.log('in wathcer')
-    console.log(config.markup.src+'/*.less')
+    console.log(config.markup.src+'/**/*.less')
     gulp.watch(config.markup.src+'/**/*.less', ['less']);
 });
