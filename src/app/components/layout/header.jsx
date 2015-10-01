@@ -2,7 +2,7 @@
 
 import React from "react";
 import Router from "react-router";
-import { LeftNav, RaisedButton, MenuItem } from "material-ui";
+import { LeftNav, RaisedButton, MenuItem, AppBar } from "material-ui";
 
 export default React.createClass({
     contextTypes: {
@@ -24,15 +24,15 @@ export default React.createClass({
     },
 
     render: function () {
-        var header = <div onClick={this._onHeaderClick}>Logo's div</div>;
-
         return (
             <div>
-                <RaisedButton label="Default"/>
+                <AppBar
+                    title="One more cool app"
+                    onLeftIconButtonTouchTap={this.toggle}
+                    />
                 <LeftNav
                     ref="leftNav"
-                    header={header}
-                    docked={true}
+                    docked={false}
                     menuItems={this.menuItems}
                     selectedIndex={this._getSelectedIndex()}
                     onChange={this._onLeftNavChange}/>
