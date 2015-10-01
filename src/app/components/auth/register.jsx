@@ -1,13 +1,8 @@
-const React = require('react');
-const Paper = require('material-ui/lib/paper');
-const RaisedButton = require('material-ui/lib/raised-button');
-const TextField = require('material-ui/lib/text-field');
-const ThemeManager = require('material-ui/lib/styles/theme-manager');
-const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
-const Colors = require('material-ui/lib/styles/colors');
+import React from "react";
+import { Paper, RaisedButton, TextField } from "material-ui"
+import { ThemeManager, LightRawTheme, Colors} from "material-ui/lib/styles"
 
-
-const Main = React.createClass({
+export default React.createClass({
 
     childContextTypes: {
         muiTheme: React.PropTypes.object
@@ -15,13 +10,13 @@ const Main = React.createClass({
 
     getInitialState () {
         return {
-            muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+            muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
         };
     },
 
     getChildContext() {
         return {
-            muiTheme: this.state.muiTheme,
+            muiTheme: this.state.muiTheme
         };
     },
 
@@ -72,5 +67,3 @@ const Main = React.createClass({
     }
 
 });
-
-module.exports = Main;

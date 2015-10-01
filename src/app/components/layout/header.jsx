@@ -2,7 +2,7 @@
 
 import React from "react";
 import Router from "react-router";
-import { LeftNav, RaisedButton } from "material-ui";
+import { LeftNav, RaisedButton, MenuItem } from "material-ui";
 
 export default React.createClass({
     contextTypes: {
@@ -12,8 +12,10 @@ export default React.createClass({
     menuItems: [
         {route: 'home', text: 'Home'},
         {route: 'logout', text: 'Logout'},
-        {route: 'login', text: 'Sign In'},
-        {route: 'register', text: 'Sign Up'},
+        {route: 'login', text: 'Login'},
+        {route: 'register', text: 'Register'},
+        {route: 'users', text: 'Users'}
+
 
     ],
 
