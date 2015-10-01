@@ -15,8 +15,6 @@ export default React.createClass({
         {route: 'login', text: 'Login'},
         {route: 'register', text: 'Register'},
         {route: 'users', text: 'Users'}
-
-
     ],
 
     getInitialState: function () {

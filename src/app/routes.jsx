@@ -8,7 +8,8 @@ import Home from './components/home.jsx';
 import Login from './components/auth/login.jsx';
 import Logout from './components/auth/logout.jsx';
 import Register from './components/auth/register.jsx';
-import User from './components/users/users.jsx';
+import Users from './components/users/user-list.jsx';
+import User from './components/users/user-detail.jsx';
 import NotFound from './not_found.jsx'
 
 
@@ -25,7 +26,8 @@ var routes = (
         <Route name="logout" handler={Logout}/>
         <Route name="register" handler={Register}/>
 
-        <Route name="users" handler={User} />
+        <Route name="users" handler={Users} />
+        <Route name="user" path="users/:userId"  handler={User} />
 
         <NotFoundRoute handler={NotFound}/>
     </Route>
