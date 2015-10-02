@@ -28,7 +28,7 @@ var routes = (
         <Route name="register" handler={Register}/>
         <Route name="change-password" handler={ChangePassword}/>
 
-        <Route name="users" handler={Users} />
+        <Route name="users" path="users" handler={Users} />
         <Route name="user" path="users/:userId"  handler={User} />
 
         <NotFoundRoute handler={NotFound}/>

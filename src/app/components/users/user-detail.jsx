@@ -11,7 +11,7 @@ export default React.createClass({
         }
     },
     componentDidMount: function () {
-        $.get(Constants.API_ENDPOINT + '/users/'+this.props.params.userId, function (result) {
+        $.get(Constants.API.Users + this.props.params.userId, function (result) {
             this.setState({user: JSON.parse(result)});
         }.bind(this));
     },

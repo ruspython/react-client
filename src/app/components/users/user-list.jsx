@@ -10,7 +10,7 @@ export default React.createClass({
         }
     },
     componentDidMount: function () {
-        $.get(Constants.API_ENDPOINT + '/users', function (result) {
+        $.get(Constants.API.Users, function (result) {
             var res, users = [];
             res = JSON.parse(result);
             users = Object.keys(res).map(function (key) {

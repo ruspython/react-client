@@ -6,6 +6,8 @@ export default {
         Login: API_ENDPOINT + 'login/',
         Register: API_ENDPOINT + 'register/',
         Logout: API_ENDPOINT + 'logout/',
-        ChangePassword: API_ENDPOINT + 'change-password/'
+        ChangePassword: API_ENDPOINT + 'change-password/',
+        Users: API_ENDPOINT + 'users/',
+        User: API_ENDPOINT + 'users/:userId'
     }
 }
