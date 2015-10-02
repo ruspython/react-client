@@ -11,9 +11,10 @@ export default React.createClass({
 
     menuItems: [
         {route: 'home', text: 'Home'},
-        {route: 'logout', text: 'Logout'},
         {route: 'login', text: 'Login'},
         {route: 'register', text: 'Register'},
+        {route: 'change-password', text: 'Change Password'},
+        {route: 'logout', text: 'Logout'},
         {route: 'users', text: 'Users'}
     ],
 

@@ -10,6 +10,7 @@ import Logout from './components/auth/logout.jsx';
 import Register from './components/auth/register.jsx';
 import Users from './components/users/user-list.jsx';
 import User from './components/users/user-detail.jsx';
+import ChangePassword from './components/auth/change-password.jsx';
 import NotFound from './not_found.jsx'
 
 
@@ -25,6 +26,7 @@ var routes = (
         <Route name="login" handler={Login}/>
         <Route name="logout" handler={Logout}/>
         <Route name="register" handler={Register}/>
+        <Route name="change-password" handler={ChangePassword}/>
 
         <Route name="users" handler={Users} />
         <Route name="user" path="users/:userId"  handler={User} />

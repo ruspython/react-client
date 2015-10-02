@@ -1,6 +1,7 @@
 import React from "react";
-import { Paper, RaisedButton, TextField } from "material-ui"
+import { RaisedButton, TextField } from "material-ui"
 import { ThemeManager, LightRawTheme, Colors} from "material-ui/lib/styles"
+import Constants from "../../constants.js"
 
 export default React.createClass({
 
@@ -31,23 +32,22 @@ export default React.createClass({
     render() {
         return (
             <div className="centered">
-                <form action="http://localhost:5000/api/v1/register" method="post">
+                <form action={Constants.API.Register} method="post">
                     <p>
                         <TextField
                             hintText="Login"
-
                             />
                     </p>
                     <p>
                         <TextField
                             hintText="Password"
-
+                            type="password"
                             />
                     </p>
                     <p>
                         <TextField
                             hintText="Retype Password"
-
+                            type="password"
                             />
                     </p>
                     <p>
